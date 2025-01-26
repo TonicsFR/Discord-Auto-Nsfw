@@ -13,11 +13,11 @@ from colored import fg, attr
 config = configparser.ConfigParser()
 config.read("./data/config.ini")
 
-nekobot_api_key = config["Nekobot"]["api_key"]
-discord_token = config["Discord"]["token"]
-channel_id = config["Discord"]["channel"]
-prefix = config["Discord"]["prefix"]
-auth_url = config["Auth"]["URL"]
+nekobot_api_key = config["Nekobot"]["https://nekobot.xyz/api"]
+discord_token = config["Discord"]["MTI5NTE1OTg5MDY3OTE2OTA3Nw.GJrmdl.lBoCvrzLf4Z-sbzE4Rq2eldfLpsTd0oj4U8BaY"]
+channel_id = config["Discord"]["1332931950830424096"]
+prefix = config["Discord"]["-"]
+auth_url = config["Auth"]["https://discord.com/oauth2/authorize?client_id=1332932116261896202&permissions=8&integration_type=0&scope=bot"]
 
 intents = discord.Intents.all()
 
@@ -55,6 +55,6 @@ async def on_ready():
         except Exception as e:
             print(f"Failed to load {cog} cog. Error: {e}")
 
-token = discord_token
+token = MTI5NTE1OTg5MDY3OTE2OTA3Nw.GJrmdl.lBoCvrzLf4Z-sbzE4Rq2eldfLpsTd0oj4U8BaY
 client.run(token)
 
